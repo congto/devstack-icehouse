@@ -14,21 +14,21 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # If using VMware Fusion
   config.vm.provider :vmware_fusion do |v|
     # Default  
-    v.vmx["memsize"] = 4096
+    v.vmx["memsize"] = 6144
     v.vmx["numvcpus"] = 2
   end
 
   # If using VMware Workstation
   config.vm.provider :vmware_workstation do |v|
     # Default  
-    v.vmx["memsize"] = 4096
+    v.vmx["memsize"] = 6144
     v.vmx["numvcpus"] = 2
   end
 
   # If using VirtualBox
   config.vm.provider :virtualbox do |vbox|
     # Defaults
-    vbox.customize ["modifyvm", :id, "--memory", 4096]
+    vbox.customize ["modifyvm", :id, "--memory", 6144]
     vbox.customize ["modifyvm", :id, "--cpus", 2]
   end
 
